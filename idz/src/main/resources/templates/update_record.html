@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="display: block">
+    <form action="/update" method="post">
+        <div>
+            <label>Change</label>
+            <input type="text" placeholder="id" name="id" required>
+            <input type="text" placeholder="Name of the dish" name="name_dish" required>
+            <input type="text" placeholder="Number of dishes" name="number_dish" required>
+            <input type="text" placeholder="The price of the dish" name="price_dish" required>
+            <input type="text" placeholder="The cost of dishes" name="cost" required>
+            <button type="submit">update</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

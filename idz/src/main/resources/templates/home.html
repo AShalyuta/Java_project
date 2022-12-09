@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="display: block">
+    <input type="text" id="myInput" onkeyup="Function()" placeholder="Name of the dish">
+    <br>
+    <a href="/addrecord">add</a>
+    <br>
+    <a href="/updaterecord">update</a>
+    <table id="myTable">
+        <tr class="header">
+            <th>ID</th>
+            <th>Name of the dish</th>
+            <th>Number of dishes</th>
+            <th>The price of the dish</th>
+            <th>The cost of dishes</th>
+        </tr>
+        <tr th:each="el : ${acc}">
+            <td th:text="${el.getId}"/>
+            <td th:text="${el.getName_dish()}"/>
+            <td th:text="${el.getNumber_dish()}"/>
+            <td th:text="${el.getPrice_dish()}"/>
+            <td th:text="${el.getCost()}"/>
+            <td>
+                <a th:href="@{/delete/{id}(id=${el.getId()})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+<script>
+    function Function() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+</html>

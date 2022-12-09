@@ -1,0 +1,19 @@
+create database restauran;
+
+create table accounting (
+    id serial primary key,
+    name_dish varchar(100),
+    number_dish varchar(50),
+    price_dish varchar(50),
+    cost varchar(50)
+);
+insert into accounting (id, name_dish, number_dish, price_dish, cost) values (1, 'Turkey - Breast, Boneless Sk On', 1, 13, 13);
+insert into accounting (id, name_dish, number_dish, price_dish, cost) values (2, 'Lemonade - Island Tea, 591 Ml', 2, 42, 82);
+insert into accounting (id, name_dish, number_dish, price_dish, cost) values (3, 'Salmon Steak - Cohoe 6 Oz', 2, 35, 70);
+insert into accounting (id, name_dish, number_dish, price_dish, cost) values (4, 'Octopus - Baby, Cleaned', 3, 15, 45);
+insert into accounting (id, name_dish, number_dish, price_dish, cost) values (5, 'Water - Mineral, Natural', 1, 31, 31);
+insert into accounting (id, name_dish, number_dish, price_dish, cost) values (6, 'Juice - Pineapple, 48 Oz', 2, 12, 24);
+insert into accounting (id, name_dish, number_dish, price_dish, cost) values (7, 'Appetizer - Lobster Phyllo Roll', 3, 10, 30);
+insert into accounting (id, name_dish, number_dish, price_dish, cost) values (8, 'Pork - Tenderloin, Frozen', 1, 11, 11);
+insert into accounting (id, name_dish, number_dish, price_dish, cost) values (9, 'Yogurt - Cherry, 175 Gr', 2, 16, 32);
+insert into accounting (id, name_dish, number_dish, price_dish, cost) values (10, 'Pepper - White, Ground', 2, 8, 16);
